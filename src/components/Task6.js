@@ -1,4 +1,5 @@
-// 6. Have a 5 x 5 table (5 rows and 5 columns). A 2 select fields (one for columns and one for rows), a input field and a button. The select fields are meant to pick a cell in the table. Picking a cell should show the content in the input field. Changing the value and hitting the button should change the value for cell.
+// 6. Print out a list of cars (at least 5) and have an input field underneeth it. Typing a car name in the input field should change the cars background to it.
+//['vaz', 'zaz', 'gaz']
 
 function Task6 () {
     return (
