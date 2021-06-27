@@ -10,6 +10,7 @@ function Example1() {
         setText('Bar');
         // const newList = JSON.parse(JSON.stringify(list));
         // const newList = [...list]; //splat operator clones an array
+        
         // better way
         // newList.push('biz');
         // setList(newList);
@@ -17,11 +18,6 @@ function Example1() {
         // setList([...list, 'biz']);
     }
 //arrays are objects - newList is pointing to a same variable 'list'
-
-
-    // useEffect(() => {
-    //     setText('Bar');
-    // }, [])
 
     // const listAsLiElem = list.map((item) => <li>{item}</li>)
 
