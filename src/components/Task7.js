@@ -18,7 +18,7 @@ function Task7() {
     return (
         <div>
             <h1>Task 6</h1>
-            <p>Highlighting the car name, if found on list</p>
+            <p>Highlighting two the car names separatetd by space, if found on list</p>
             <ul>{carsList}
             </ul>
             <input value={inputText} placeHolder={'search'} onChange={(e) => setInputText(e.target.value)} />

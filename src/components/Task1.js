@@ -1,7 +1,11 @@
 /* 1. Print out every other number (every odd number) 
 from 1 - 100 as an ordered list using react. */
 
+import { useState } from 'react';
+
 function Task1() {
+    const [numbers, setNumbers] = useState([])
+
     const oddNumbers = [];
     for (let i = 1; i <= 100; i++) {
         if (i % 2) {
@@ -9,25 +13,16 @@ function Task1() {
         }
     }
 
-    // let toggle = true;
+    const showNumbers = () => {
+        return setNumbers(oddNumbers);
+    }
 
-    // const toggleOn = () => {
-    //     toggle = true;
-    //     console.log(toggle);
-    // }
-    // const toggleOff = () => {
-    //     toggle = false;
-    //     console.log(toggle);
-    // }
-    
     return (
         <div>
             <h1>Task 1</h1>
             <p>Printing only odd numbers from 1 to 100:</p>
-            {/* <p>{toggle ? 'show' : ''}</p> */}
-            {/* <p>{oddNumbers}</p> */}
-            {/* <button onClick={toggleOn}>Show</button>
-            <button onClick={toggleOff}>Hide</button> */}
+            <p>{numbers}</p>
+            <button onClick={showNumbers}>Show the numbers</button>
         </div>
     )
 }
