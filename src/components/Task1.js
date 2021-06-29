@@ -8,7 +8,7 @@ function Task1() {
 
     const oddNumbers = [];
     for (let i = 1; i <= 100; i += 2) {
-        oddNumbers.push(<li>{i}</li>);
+        oddNumbers.push(<li key={i}>{i}</li>);
     }
 
     const showNumbers = () => {
