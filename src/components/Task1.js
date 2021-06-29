@@ -25,7 +25,7 @@ function Task1() {
             <h1>Task 1</h1>
             <p>Printing only odd numbers from 1 to 100:</p>
             {/* <p>{toggle ? 'show' : ''}</p> */}
-            <p>{oddNumbers}</p>
+            {/* <p>{oddNumbers}</p> */}
             {/* <button onClick={toggleOn}>Show</button>
             <button onClick={toggleOff}>Hide</button> */}
         </div>

@@ -24,7 +24,7 @@ function Task2() {
         <div>
             <h1>Task 2</h1>
             <p>Printing numbers from 1 to 100, replacing with Fizz, if it divides with 2, Buzz - if it devides with 3, FizzBuzz - if it divides with 2 and 3:</p>
-            <p>{fizzBuzzArray}</p>
+            {/* <p>{fizzBuzzArray}</p> */}
         </div>
     )
 }
