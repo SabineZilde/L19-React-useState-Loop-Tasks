@@ -7,14 +7,16 @@ function Task1() {
     const [numbers, setNumbers] = useState([])
 
     const oddNumbers = [];
-    for (let i = 1; i <= 100; i++) {
-        if (i % 2) {
-            oddNumbers.push(<li>{i}</li>);
-        }
+    for (let i = 1; i <= 100; i += 2) {
+        oddNumbers.push(<li>{i}</li>);
     }
 
     const showNumbers = () => {
         return setNumbers(oddNumbers);
+    }
+
+    const hideNumbers = () => {
+        return setNumbers([]);
     }
 
     return (
@@ -22,7 +24,8 @@ function Task1() {
             <h1>Task 1</h1>
             <p>Printing only odd numbers from 1 to 100:</p>
             <p>{numbers}</p>
-            <button onClick={showNumbers}>Show the numbers</button>
+            <button onClick={showNumbers}>Show</button>
+            <button onClick={hideNumbers}>Hide</button>
         </div>
     )
 }
