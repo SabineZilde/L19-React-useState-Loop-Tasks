@@ -10,14 +10,14 @@ function Task7() {
 
     const cars = ['audi', 'toyota', 'opel', 'tesla', 'mazda'];
 
-    const carsList = cars.map((car) => {
+    const carsList = cars.map((car, index) => {
         return inputText === car ?
-            <li style={{ backgroundColor: 'green' }}>{car}</li> : <li>{car}</li>;
+            <li key={index} style={{ backgroundColor: 'green' }}>{car}</li> : <li key={index}>{car}</li>;
     })
 
     return (
         <div>
-            <h1>Task 6</h1>
+            <h1>Task 7</h1>
             <p>Highlighting two the car names separatetd by space, if found on list</p>
             <ul>{carsList}
             </ul>

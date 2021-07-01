@@ -1,18 +1,14 @@
 /* 3. Have a table with 2 columns and 2 rows + 
 a button. Clicking on that button should add a row 
 to the table. */
+
 import { useState } from 'react';
 
 function Task3() {
-    //must use useState(number of rows)
     const [rowCount, addRowCount] = useState(0);
     const [row, addRow] = useState('');
 
     const rowArray = [];
-
-    // const drowTable = rowArray.map((row) => {
-    //     return <tr>{row}</tr>;
-    // })
 
     const handleButtonClick = () => {
         addRowCount(rowCount + 1);
@@ -24,22 +20,23 @@ function Task3() {
                 </tr>);
             addRow(rowArray);
         }
-
     }
 
     return (
         <div>
             <h1>Task 3</h1>
             <table border="1">
-                <tr>
-                    <td>Row1 cell1</td>
-                    <td>Row1 cell2</td>
-                </tr>
-                <tr>
-                    <td>Row2 cell1</td>
-                    <td>Row2 cell2</td>
-                </tr>
-                {row}
+                <tbody>
+                    <tr>
+                        <td>Row1 cell1</td>
+                        <td>Row1 cell2</td>
+                    </tr>
+                    <tr>
+                        <td>Row2 cell1</td>
+                        <td>Row2 cell2</td>
+                    </tr>
+                    {row}
+                </tbody>
             </table>
             <div>
                 <button onClick={handleButtonClick} style={{ marginTop: '5px' }}>Add a row</button>

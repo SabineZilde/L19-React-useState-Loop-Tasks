@@ -9,10 +9,13 @@ function Task4() {
     const [array, setArray] = useState(['milk', 'bread', 'dog food']);
     const [listElement, setListElement] = useState('');
 
-    //taks our array and returns it as a list
-    const arrayAsList = array.map((i) => {
-        return <li>{i}</li>
-    });
+    //takes our array and returns it as a list
+    // const arrayAsList = array.map((i, index) => {
+    //     return <li key={index}>{i}</li>
+    // });
+
+    //same thing as a shorthand syntax
+    const arrayAsList = array.map((i, index) => <li key={index}>{i}</li>);
 
     //pushing the input value to our array
     const addElementToList = () => {
