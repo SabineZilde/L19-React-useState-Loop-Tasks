@@ -20,7 +20,7 @@ function Task4() {
     //pushing the input value to our array
     const addElementToList = () => {
         setArray(prevArray => [...prevArray, listElement]);
-        setListElement('');
+        setListElement(''); //cleares input field after the element is added to list
     }
 
     return (

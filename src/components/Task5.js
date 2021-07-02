@@ -8,20 +8,43 @@ function Task5() {
         ['Foo 4-1', 'Foo 4-2', 'Foo 4-3', 'Foo 4-4', 'Foo 4-5'],
         ['Foo 5-1', 'Foo 5-2', 'Foo 5-3', 'Foo 5-4', 'Foo 5-5'],
     ];
-    
+
     const lastTable = [];
-    
+
+    let rowNumber = 0;  // for creating unique key number for key
     for (let rows of tableData) {
-        lastTable.push(<tr></tr>);
+        lastTable.push(<tr key={rowNumber}></tr>);
+        rowNumber++;
+
+        let colNumber = 0;
         for (let columns of rows) {
-            lastTable.push(<td>{columns}</td>)
+            lastTable.push(<td key={colNumber}>{columns}</td>)
+            colNumber++;
         }
     }
+
+    //same thing but with maps method
+    const tableRowElements = tableData.map((row, rowIndex) => {
+        const tableColElements = row.map((col, colIndex) => {
+            return <td key={colIndex}>{col}</td>
+        })
+        return (
+            <tr key={rowIndex}>{tableColElements}</tr>
+        )
+    })
 
     return (
         <div>
             <h1>Task 5</h1>
-            <table border="1">{lastTable}</table>
+            <table border="1">
+                <tbody>
+                    {lastTable}
+                </tbody>
+                <br />
+                <tbody>
+                    {tableRowElements}
+                </tbody>
+            </table>
         </div>
     )
 }
