@@ -11,7 +11,10 @@ function Task7() {
     const cars = ['audi', 'toyota', 'opel', 'tesla', 'mazda'];
 
     const carsList = cars.map((car, index) => {
-        return inputText === car ? <li key={index} style={{ backgroundColor: 'green' }}>{car}</li> : <li key={index}>{car}</li>;
+        const specialCarrNamesArray = inputText.split(' ');
+        // -1 is nonexistant index of any array
+        //if index of this array element is any valid number, then green, if not then no bgcolor is set
+        return specialCarrNamesArray.indexOf(car) !== -1 ? <li key={index} style={{ backgroundColor: 'green' }}>{car}</li> : <li key={index}>{car}</li>;
     })
 
     return (
