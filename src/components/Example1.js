@@ -34,7 +34,7 @@ function Example1() {
         // setList(['biz', ...list]);
     }
 
-    const listAsLiElem = list.map((item) => <li>{item}</li>)
+    const listAsLiElem = list.map((item, index) => <li key={index}>{item}</li>)
 
     return (
         <div>

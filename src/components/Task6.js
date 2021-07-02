@@ -9,7 +9,7 @@ function Task6() {
     const cars = ['audi', 'toyota', 'opel', 'tesla', 'mazda'];
 
     const carsList = cars.map((car, index) => {
-        return inputText === car ? <li key={index} style={{ backgroundColor: 'green' }}>{car}</li> : <li>{car}</li>;
+        return inputText === car ? <li key={index} style={{ backgroundColor: 'green' }}>{car}</li> : <li key={index}>{car}</li>;
     })
 
     return (
@@ -17,7 +17,7 @@ function Task6() {
             <h1>Task 6</h1>
             <p>Highlighting the car name, if found on list</p>
             <ul>{carsList}</ul>
-            <input value={inputText} placeHolder={'search'} onChange={(e) => setInputText(e.target.value)} />
+            <input value={inputText} placeholder={'search'} onChange={(e) => setInputText(e.target.value)} />
         </div>
     )
 }

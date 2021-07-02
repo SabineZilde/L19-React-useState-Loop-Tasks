@@ -20,7 +20,7 @@ function Task8() {
         <div>
             <h1>Task 8</h1>
             <p>Enter the car name to see if it is in our database:</p>
-            <input placeHolder={'search'} value={inputText} onChange={(e) => setInputText(e.target.value)}/>
+            <input placeholder={'search'} value={inputText} onChange={(e) => setInputText(e.target.value)}/>
             {carFoundResult}
         </div>
     )

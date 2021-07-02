@@ -40,7 +40,8 @@ function Task5() {
                 <tbody>
                     {lastTable}
                 </tbody>
-                <br />
+            </table>
+            <table border="1">
                 <tbody>
                     {tableRowElements}
                 </tbody>
